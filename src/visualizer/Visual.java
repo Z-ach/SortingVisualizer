@@ -17,7 +17,7 @@ import visualizer.algorithms.BubbleSort;
 import visualizer.algorithms.InsertionSort;
 import visualizer.algorithms.SelectionSort;
 import visualizer.algorithms.Sort;
-import visualizer.shapes.Rectangle;
+import visualizer.shapes.Circle;
 import visualizer.shapes.Shape;
 
 public class Visual extends JPanel implements ActionListener, KeyListener{
@@ -27,7 +27,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	private Timer timer;
 	private int defaultRefresh = 5;
 	private int refresh = defaultRefresh;
-	private int numbRects = 100;
+	private int numbRects = 250;
 	private int scale = (Main.HEIGHT - 20) / numbRects;
 	
 	private long startTime = 0;
@@ -77,7 +77,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	private ArrayList<Shape> initArray(int size){
 		ArrayList<Shape> list = new ArrayList<Shape>(size);
 		for(int i = 0; i < size; i++) {
-			list.add(new Rectangle((int)((Main.WIDTH) / size), (i+1)*scale));
+			list.add(new Circle((int)((Main.WIDTH) / size), (i+1)*scale));
 		}
 		Collections.shuffle(list);
 		return list;
