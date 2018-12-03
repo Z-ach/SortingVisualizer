@@ -1,7 +1,7 @@
 package visualizer.algorithms;
 import java.util.ArrayList;
 
-import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public class InsertionSort extends Sort{
 	
@@ -11,7 +11,7 @@ public class InsertionSort extends Sort{
 		sortName = "Insertion Sort";
 	}
 	
-	public ArrayList<Rectangle> sort(ArrayList<Rectangle> list){
+	public ArrayList<Shape> sort(ArrayList<Shape> list){
 		int checkIndex = i + 1;
 		while(checkIndex != 0 && list.get(checkIndex - 1).compareTo(list.get(checkIndex)) > 0) {
 			swap(list, checkIndex - 1, checkIndex);

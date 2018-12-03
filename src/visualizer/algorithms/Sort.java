@@ -1,18 +1,18 @@
 package visualizer.algorithms;
 import java.util.ArrayList;
 
-import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public abstract class Sort {
 	
 	public boolean sorted;
 	public String sortName;
 	
-	public abstract ArrayList<Rectangle> sort(ArrayList<Rectangle> list);
+	public abstract ArrayList<Shape> sort(ArrayList<Shape> list);
 	public abstract void reset();
 	
-	protected ArrayList<Rectangle> swap(ArrayList<Rectangle> list, int i, int j){
-		Rectangle temp = list.get(i);
+	protected ArrayList<Shape> swap(ArrayList<Shape> list, int i, int j){
+		Shape temp = list.get(i);
 		list.set(i, list.get(j));
 		list.set(j, temp);
 		return list;

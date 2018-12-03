@@ -4,10 +4,7 @@ import java.awt.Graphics;
 
 import visualizer.Main;
 
-public class Rectangle implements Comparable<Rectangle>{
-	
-	private int value;
-	private int width;
+public class Rectangle extends Shape{
 	
 	public Rectangle(int width, int value) {
 		this.value = value;
@@ -18,13 +15,5 @@ public class Rectangle implements Comparable<Rectangle>{
 		g.fillRect(arrPos * width, (Main.HEIGHT - value), width - 1, value);
 	}
 	
-	public int getValue() {
-		return value;
-	}
-
-	@Override
-	public int compareTo(Rectangle other) {
-		return this.value > other.getValue() ? 1 : -1;
-	}
 	
 }

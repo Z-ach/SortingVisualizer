@@ -2,6 +2,7 @@ package visualizer.algorithms;
 import java.util.ArrayList;
 
 import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public class SelectionSort extends Sort {
 	
@@ -12,7 +13,7 @@ public class SelectionSort extends Sort {
 	}
 
 	@Override
-	public ArrayList<Rectangle> sort(ArrayList<Rectangle> list) {
+	public ArrayList<Shape> sort(ArrayList<Shape> list) {
 		if(i == list.size() - 1) {
 			sorted = true;
 			return list;

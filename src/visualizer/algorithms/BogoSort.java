@@ -2,7 +2,7 @@ package visualizer.algorithms;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public class BogoSort extends Sort{
 
@@ -10,10 +10,9 @@ public class BogoSort extends Sort{
 		sortName = "Bogo Sort";
 	}
 	
-	
-	public ArrayList<Rectangle> sort(ArrayList<Rectangle> list) {
+	public ArrayList<Shape> sort(ArrayList<Shape> list) {
 		Collections.shuffle(list);
-		ArrayList<Rectangle> sortedArray = (ArrayList<Rectangle>) list.clone();
+		ArrayList<Shape> sortedArray = (ArrayList<Shape>) list.clone();
 		Collections.sort(sortedArray);
 		sorted = true;
 		for(int i = 0; i < list.size(); i++) {

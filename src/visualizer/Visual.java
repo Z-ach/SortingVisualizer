@@ -18,6 +18,7 @@ import visualizer.algorithms.InsertionSort;
 import visualizer.algorithms.SelectionSort;
 import visualizer.algorithms.Sort;
 import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public class Visual extends JPanel implements ActionListener, KeyListener{
 	
@@ -26,7 +27,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	private Timer timer;
 	private int defaultRefresh = 5;
 	private int refresh = defaultRefresh;
-	private int numbRects = 25;
+	private int numbRects = 100;
 	private int scale = (Main.HEIGHT - 20) / numbRects;
 	
 	private long startTime = 0;
@@ -39,7 +40,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	
 	int validationIndex = 0;
 	
-	private ArrayList<Rectangle> array;
+	private ArrayList<Shape> array;
 	
 	
 	public Visual() {
@@ -73,8 +74,8 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	}
 	
 	
-	private ArrayList<Rectangle> initArray(int size){
-		ArrayList<Rectangle> list = new ArrayList<Rectangle>(size);
+	private ArrayList<Shape> initArray(int size){
+		ArrayList<Shape> list = new ArrayList<Shape>(size);
 		for(int i = 0; i < size; i++) {
 			list.add(new Rectangle((int)((Main.WIDTH) / size), (i+1)*scale));
 		}

@@ -1,7 +1,7 @@
 package visualizer.algorithms;
 import java.util.ArrayList;
 
-import visualizer.shapes.Rectangle;
+import visualizer.shapes.Shape;
 
 public class BubbleSort extends Sort{
 	
@@ -12,12 +12,10 @@ public class BubbleSort extends Sort{
 		sortName = "Bubble Sort";
 	}
 	
-	public ArrayList<Rectangle> sort(ArrayList<Rectangle> list){
+	public ArrayList<Shape> sort(ArrayList<Shape> list){
 		if (sorted) return list;
 		if(list.get(j).compareTo(list.get(j + 1)) > 0) {
-			Rectangle temp = list.get(j);
-			list.set(j, list.get(j + 1));
-			list.set(j + 1, temp);
+			swap(list, j, j + 1);
 		}
 		
 		j += 1;
