@@ -27,7 +27,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	private Timer timer;
 	private int defaultRefresh = 5;
 	private int refresh = defaultRefresh;
-	private int numbRects = 250;
+	private int numbRects = Main.WIDTH/4;
 	private int scale = (Main.HEIGHT - 20) / numbRects;
 	
 	private long startTime = 0;
@@ -87,6 +87,9 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	public void paint(Graphics g) {
 		super.paint(g);
 		
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, Main.WIDTH, Main.HEIGHT);
+		
 		if(!sorter.sorted && shouldSort) sorter.sort(array);
 		
 		if(sorter.sorted && startTime != 0) {
@@ -98,11 +101,11 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 		for(int k = 0; k < numbRects; k++) {
 			if(sorter.sorted && k <= validationIndex)
 				g.setColor(Color.GREEN);
-			else g.setColor(Color.BLUE);
+			else g.setColor(Color.WHITE);
 			array.get(k).display(g, k);
 		}
 		
-		g.setColor(Color.BLACK);
+		g.setColor(Color.WHITE);
 		g.drawString(Integer.toString(refresh), 5, 15);
 		g.drawString(sorter.sortName, 5, 35);
 		g.drawString(shouldSort ? "Sort Running" : "Sort Paused", 5, 55);
