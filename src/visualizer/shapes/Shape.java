@@ -7,7 +7,6 @@ public abstract class Shape implements Comparable<Shape>{
 	protected int value;
 	protected int width;
 	
-	
 	public abstract void display(Graphics g, int arrPos);
 	
 	public int getValue() {

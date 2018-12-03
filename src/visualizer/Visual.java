@@ -108,9 +108,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 		g.drawString(shouldSort ? "Sort Running" : "Sort Paused", 5, 55);
 		
 		if(sorter.sorted && validationIndex < numbRects) validationIndex++;
-		
-		
-		
+
 	}
 	
 
