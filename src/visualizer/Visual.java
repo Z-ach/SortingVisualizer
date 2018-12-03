@@ -12,13 +12,8 @@ import java.util.Collections;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import visualizer.algorithms.BogoSort;
-import visualizer.algorithms.BubbleSort;
-import visualizer.algorithms.InsertionSort;
-import visualizer.algorithms.SelectionSort;
-import visualizer.algorithms.Sort;
-import visualizer.shapes.Circle;
-import visualizer.shapes.Shape;
+import visualizer.algorithms.*;
+import visualizer.shapes.*;
 
 public class Visual extends JPanel implements ActionListener, KeyListener{
 	
@@ -27,7 +22,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 	private Timer timer;
 	private int defaultRefresh = 5;
 	private int refresh = defaultRefresh;
-	private int numbRects = Main.WIDTH/4;
+	private int numbRects = 50;
 	private int scale = (Main.HEIGHT - 20) / numbRects;
 	
 	private long startTime = 0;
@@ -52,7 +47,7 @@ public class Visual extends JPanel implements ActionListener, KeyListener{
 		
 		array = initArray(numbRects);
 		
-		sorter = new SelectionSort();
+		sorter = new BubbleSort();
 		
 	}
 	
